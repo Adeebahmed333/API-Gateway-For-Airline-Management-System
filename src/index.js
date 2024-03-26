@@ -1,7 +1,7 @@
 const express=require('express');
 const morgan=require('morgan');
 const {createProxyMiddleware}=require('http-proxy-middleware');
-const {PORT}=require('./config/server-config');
+//const {PORT}=require('./config/server-config');
 const rateLimit=require('express-rate-limit');
 const axios=require('axios');
 const app=express();
@@ -48,8 +48,8 @@ function  setupAndStartServer()
         message:"OK"
     });
   });
-  app.listen(PORT,()=>{
-    console.log(`Server Started At port ${PORT}`);
+  app.listen(3007,()=>{
+    console.log(`Server Started At port 3007`);
   });
 }
 setupAndStartServer();
